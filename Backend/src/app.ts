@@ -13,6 +13,7 @@ import { applicationRoutes } from './routes/application.routes.js';
 import { authRoutes } from './routes/auth.routes.js';
 import { candidateRoutes } from './routes/candidate.routes.js';
 import { clientRoutes } from './routes/client.routes.js';
+import { dashboardRoutes } from './routes/dashboard.routes.js';
 import { healthRoutes } from './routes/health.routes.js';
 import { ingestLogRoutes } from './routes/ingest-log.routes.js';
 import { sessionRoutes } from './routes/session.routes.js';
@@ -69,6 +70,7 @@ export function createApp(config: AppConfig, deps: { ai?: GeminiClient } = {}): 
   app.use('/v1/sessions', sessionRoutes(requireJwt('admin', 'manager'), ai));
   app.use('/v1/candidates', candidateRoutes(requireJwt('admin', 'manager'), requireJwt()));
   app.use('/v1/ingest-log', ingestLogRoutes(requireJwt('admin', 'manager')));
+  app.use('/v1/dashboard', dashboardRoutes(requireJwt('admin', 'manager')));
 
   // New portal surface: auth, clients, applications, user management.
   app.use('/v1/clients', clientRoutes(requireJwt));

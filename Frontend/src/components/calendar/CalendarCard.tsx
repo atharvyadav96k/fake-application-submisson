@@ -1,22 +1,29 @@
-import { useRef } from "react";
+import { useCallback, useRef, useState } from "react";
 import FullCalendar from "@fullcalendar/react";
 import dayGridPlugin from "@fullcalendar/daygrid";
 import timeGridPlugin from "@fullcalendar/timegrid";
 import interactionPlugin from "@fullcalendar/interaction";
+import type { DatesSetArg } from "@fullcalendar/core";
+import api from "../../lib/api";
 
 const CalendarCard: React.FC = () => {
   const calendarRef = useRef<FullCalendar>(null);
+  const [applicationCounts, setApplicationCounts] = useState<Record<string, number>>({});
 
   const toDateKey = (date: Date) => date.toISOString().split("T")[0];
 
-  // Mock count of applications received per day
-  const applicationCounts: Record<string, number> = {
-    [toDateKey(new Date())]: 5,
-    [toDateKey(new Date(Date.now() + 86400000))]: 2,
-    [toDateKey(new Date(Date.now() + 172800000))]: 8,
-    [toDateKey(new Date(Date.now() + 345600000))]: 1,
-    [toDateKey(new Date(Date.now() - 86400000))]: 3,
-  };
+  const handleDatesSet = useCallback((arg: DatesSetArg) => {
+    // The visible month is the one the current view is centered on.
+    const anchor = new Date((arg.view.currentStart.getTime() + arg.view.currentEnd.getTime()) / 2);
+    const month = `${anchor.getFullYear()}-${String(anchor.getMonth() + 1).padStart(2, "0")}`;
+
+    api
+      .get<{ counts: Record<string, number> }>("/v1/dashboard/applications-by-day", {
+        params: { month },
+      })
+      .then((res) => setApplicationCounts(res.data.counts))
+      .catch(() => setApplicationCounts({}));
+  }, []);
 
   const renderDayCellContent = (arg: any) => {
     const count = applicationCounts[toDateKey(arg.date)];
@@ -46,6 +53,7 @@ const CalendarCard: React.FC = () => {
           }}
           selectable={false}
           dayCellContent={renderDayCellContent}
+          datesSet={handleDatesSet}
         />
       </div>
     </div>

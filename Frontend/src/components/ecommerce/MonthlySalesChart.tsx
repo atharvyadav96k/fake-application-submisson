@@ -3,9 +3,34 @@ import { ApexOptions } from "apexcharts";
 import { Dropdown } from "../ui/dropdown/Dropdown";
 import { DropdownItem } from "../ui/dropdown/DropdownItem";
 import { MoreDotIcon } from "../../icons";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import api, { getApiErrorMessage } from "../../lib/api";
+
+interface MonthlyApplicationCount {
+  month: string;
+  year: number;
+  count: number;
+}
 
 export default function MonthlySalesChart() {
+  const [monthly, setMonthly] = useState<MonthlyApplicationCount[]>([]);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    let cancelled = false;
+    api
+      .get<{ items: MonthlyApplicationCount[] }>("/v1/dashboard/monthly-applications")
+      .then((res) => {
+        if (!cancelled) setMonthly(res.data.items);
+      })
+      .catch((err) => {
+        if (!cancelled) setError(getApiErrorMessage(err, "Unable to load monthly applications."));
+      });
+    return () => {
+      cancelled = true;
+    };
+  }, []);
+
   const options: ApexOptions = {
     colors: ["#465fff"],
     chart: {
@@ -33,20 +58,7 @@ export default function MonthlySalesChart() {
       colors: ["transparent"],
     },
     xaxis: {
-      categories: [
-        "Jan",
-        "Feb",
-        "Mar",
-        "Apr",
-        "May",
-        "Jun",
-        "Jul",
-        "Aug",
-        "Sep",
-        "Oct",
-        "Nov",
-        "Dec",
-      ],
+      categories: monthly.map((m) => m.month),
       axisBorder: {
         show: false,
       },
@@ -88,7 +100,7 @@ export default function MonthlySalesChart() {
   const series = [
     {
       name: "Applications",
-      data: [168, 385, 201, 298, 187, 195, 291, 110, 215, 390, 280, 112],
+      data: monthly.map((m) => m.count),
     },
   ];
   const [isOpen, setIsOpen] = useState(false);
@@ -131,11 +143,15 @@ export default function MonthlySalesChart() {
         </div>
       </div>
 
-      <div className="max-w-full overflow-x-auto custom-scrollbar">
-        <div className="-ml-5 min-w-[650px] xl:min-w-full pl-2">
-          <Chart options={options} series={series} type="bar" height={180} />
+      {error ? (
+        <p className="py-6 text-sm text-error-500">{error}</p>
+      ) : (
+        <div className="max-w-full overflow-x-auto custom-scrollbar">
+          <div className="-ml-5 min-w-[650px] xl:min-w-full pl-2">
+            <Chart options={options} series={series} type="bar" height={180} />
+          </div>
         </div>
-      </div>
+      )}
     </div>
   );
 }
