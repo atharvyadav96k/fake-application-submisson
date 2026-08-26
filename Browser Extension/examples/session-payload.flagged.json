@@ -1,0 +1,363 @@
+{
+  "_comment": "The 'Apply clicked, nothing happened' case. Note that outcome is `flagged`, not a verdict about the person: it means the browser-side evidence is contradictory and a human should look.",
+  "schema_version": "1.0",
+  "session": {
+    "schema_version": "1.0",
+    "session_id": "b91d0c77-3aa4-4f22-9c18-77e2a51b3d04",
+    "operator_id": "op-4821",
+    "candidate_id": "cand-90477",
+    "candidate_email": "[REDACTED]",
+    "candidate_email_hash": "sha256:ef2d127de37b942baad06145e54b0c619a1f22327b2ebbcfbec78f5564afe39d",
+    "portal_domain": "careers.unknown-portal.example",
+    "matched_adapter": "unknown",
+    "adapter_name": "generic",
+    "timestamps": {
+      "selected": "2026-08-15T11:20:00.000Z",
+      "candidate_record_opened": null,
+      "first_field_fill_at": "2026-08-15T11:21:14.220Z",
+      "first_fill": "2026-08-15T11:21:14.220Z",
+      "applied_clicked": "2026-08-15T11:24:02.000Z",
+      "submit_detected": null,
+      "confirmed": null,
+      "last_activity": "2026-08-15T11:24:20.500Z",
+      "ended": "2026-08-15T11:25:00.000Z"
+    },
+    "candidate_record_opened_before_fill": null,
+    "state": "ended",
+    "outcome": "flagged",
+    "outcome_reasons": [
+      "negative evidence present: validation_error_after_submit, form_still_present"
+    ],
+    "hash_salt": "",
+    "created_at": "2026-08-15T11:20:00.000Z",
+    "updated_at": "2026-08-15T11:25:00.000Z"
+  },
+  "pages": [
+    {
+      "page_id": "pg_9f8e7d6c5b4a",
+      "sanitized_url": "https://careers.unknown-portal.example/apply?job=5521&token=[REDACTED]",
+      "domain": "careers.unknown-portal.example",
+      "path": "/apply",
+      "title": "Apply for Backend Engineer",
+      "referrer": null,
+      "entry_point": "initial_load",
+      "frame": "top",
+      "page_type": "application_form",
+      "first_seen_at": "2026-08-15T11:20:31.000Z",
+      "last_seen_at": "2026-08-15T11:24:55.000Z",
+      "sequence": 0
+    }
+  ],
+  "fields": [
+    {
+      "field_id": "f_112233445566",
+      "canonical_field": "first_name",
+      "instance_index": 0,
+      "group_key": null,
+      "descriptor": {
+        "kind": "input",
+        "tag": "input",
+        "input_type": "text",
+        "name_hint": "q_2841",
+        "id_hint": "q_2841",
+        "label_hint": "first name",
+        "placeholder_hint": null,
+        "aria_label_hint": null,
+        "autocomplete": null,
+        "dom_path": "form>div.row>input",
+        "signals": ["label", "name"],
+        "confidence": 0.78
+      },
+      "sensitivity": "hashed_only",
+      "required": true,
+      "state": "filled",
+      "input_method": "autofilled",
+      "interaction": {
+        "focus_count": 0,
+        "first_focus_at": null,
+        "last_focus_at": null,
+        "last_blur_at": null,
+        "time_in_field_ms": 0,
+        "keystroke_count": 0,
+        "paste_count": 0,
+        "edit_count": 0,
+        "clear_count": 0,
+        "fill_sequence_number": 1,
+        "first_fill_at": "2026-08-15T11:21:14.220Z",
+        "last_change_at": "2026-08-15T11:21:14.220Z",
+        "skipped": false
+      },
+      "value": null,
+      "value_hash": "sha256:6b23c0d5f35d1b11f9b683f0b0a617355deb11277d91ae091d399c655b87940d",
+      "value_redacted": true,
+      "value_length": 4,
+      "match_result": "match",
+      "match_note": null,
+      "first_seen_at": "2026-08-15T11:20:31.400Z",
+      "last_seen_at": "2026-08-15T11:24:20.000Z",
+      "visible": true,
+      "detached_at": null
+    },
+    {
+      "field_id": "f_223344556677",
+      "canonical_field": "email",
+      "instance_index": 0,
+      "group_key": null,
+      "descriptor": {
+        "kind": "input",
+        "tag": "input",
+        "input_type": "email",
+        "name_hint": "q_2843",
+        "id_hint": "q_2843",
+        "label_hint": "email address",
+        "placeholder_hint": null,
+        "aria_label_hint": null,
+        "autocomplete": "email",
+        "dom_path": "form>div.row>input",
+        "signals": ["autocomplete", "label"],
+        "confidence": 0.92
+      },
+      "sensitivity": "hashed_only",
+      "required": true,
+      "state": "empty",
+      "input_method": "unknown",
+      "interaction": {
+        "focus_count": 1,
+        "first_focus_at": "2026-08-15T11:22:02.000Z",
+        "last_focus_at": "2026-08-15T11:22:02.000Z",
+        "last_blur_at": "2026-08-15T11:22:03.100Z",
+        "time_in_field_ms": 1100,
+        "keystroke_count": 0,
+        "paste_count": 0,
+        "edit_count": 0,
+        "clear_count": 0,
+        "fill_sequence_number": null,
+        "first_fill_at": null,
+        "last_change_at": null,
+        "skipped": true
+      },
+      "value": null,
+      "value_hash": null,
+      "value_redacted": true,
+      "value_length": 0,
+      "match_result": "unverifiable",
+      "match_note": "field is empty",
+      "first_seen_at": "2026-08-15T11:20:31.410Z",
+      "last_seen_at": "2026-08-15T11:24:20.000Z",
+      "visible": true,
+      "detached_at": null
+    },
+    {
+      "field_id": "f_334455667788",
+      "canonical_field": "unknown",
+      "instance_index": 0,
+      "group_key": null,
+      "descriptor": {
+        "kind": "select",
+        "tag": "select",
+        "input_type": null,
+        "name_hint": "q_2899",
+        "id_hint": "q_2899",
+        "label_hint": null,
+        "placeholder_hint": null,
+        "aria_label_hint": null,
+        "autocomplete": null,
+        "dom_path": "form>div.row>select",
+        "signals": [],
+        "confidence": 0.21
+      },
+      "sensitivity": "hashed_only",
+      "required": false,
+      "state": "empty",
+      "input_method": "unknown",
+      "interaction": {
+        "focus_count": 0,
+        "first_focus_at": null,
+        "last_focus_at": null,
+        "last_blur_at": null,
+        "time_in_field_ms": 0,
+        "keystroke_count": 0,
+        "paste_count": 0,
+        "edit_count": 0,
+        "clear_count": 0,
+        "fill_sequence_number": null,
+        "first_fill_at": null,
+        "last_change_at": null,
+        "skipped": true
+      },
+      "value": null,
+      "value_hash": null,
+      "value_redacted": true,
+      "value_length": 0,
+      "match_result": "unverifiable",
+      "match_note": "field could not be mapped to a canonical name",
+      "first_seen_at": "2026-08-15T11:20:31.420Z",
+      "last_seen_at": "2026-08-15T11:24:20.000Z",
+      "visible": true,
+      "detached_at": null
+    }
+  ],
+  "events": [
+    {
+      "schema_version": "1.0",
+      "event_id": "aa11bb22-cc33-4dd4-8ee5-ff6600112233",
+      "session_id": "b91d0c77-3aa4-4f22-9c18-77e2a51b3d04",
+      "timestamp": "2026-08-15T11:21:14.220Z",
+      "monotonic_ms": 43220,
+      "event_type": "field_autofill",
+      "page": {
+        "domain": "careers.unknown-portal.example",
+        "path": "/apply",
+        "sanitized_url": "https://careers.unknown-portal.example/apply?job=5521&token=[REDACTED]",
+        "title": "Apply for Backend Engineer",
+        "frame": "top"
+      },
+      "field": {
+        "field_id": "f_112233445566",
+        "canonical_name": "first_name",
+        "instance_index": 0,
+        "group_key": null
+      },
+      "metadata": {
+        "note": "value appeared without corresponding keystrokes; autofill, password manager, or assistive input are all plausible causes"
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "event_id": "bb22cc33-dd44-4ee5-9ff6-001122334455",
+      "session_id": "b91d0c77-3aa4-4f22-9c18-77e2a51b3d04",
+      "timestamp": "2026-08-15T11:24:02.000Z",
+      "monotonic_ms": 212000,
+      "event_type": "submit_button_click",
+      "page": {
+        "domain": "careers.unknown-portal.example",
+        "path": "/apply",
+        "sanitized_url": "https://careers.unknown-portal.example/apply?job=5521&token=[REDACTED]",
+        "title": "Apply for Backend Engineer",
+        "frame": "top"
+      },
+      "metadata": {
+        "detail": "submit-like control clicked: \"Apply now\"",
+        "control_tag": "button",
+        "visible": true
+      },
+      "dedupe_key": "submit_click"
+    },
+    {
+      "schema_version": "1.0",
+      "event_id": "cc33dd44-ee55-4ff6-8001-112233445566",
+      "session_id": "b91d0c77-3aa4-4f22-9c18-77e2a51b3d04",
+      "timestamp": "2026-08-15T11:24:02.640Z",
+      "monotonic_ms": 212640,
+      "event_type": "validation_error",
+      "page": {
+        "domain": "careers.unknown-portal.example",
+        "path": "/apply",
+        "sanitized_url": "https://careers.unknown-portal.example/apply?job=5521&token=[REDACTED]",
+        "title": "Apply for Backend Engineer",
+        "frame": "top"
+      },
+      "metadata": {
+        "count": 2,
+        "fields": [],
+        "excerpt": "Email address is required",
+        "after_submit_attempt": true
+      },
+      "dedupe_key": "validation:2:"
+    },
+    {
+      "schema_version": "1.0",
+      "event_id": "dd44ee55-ff66-4001-9112-233445566778",
+      "session_id": "b91d0c77-3aa4-4f22-9c18-77e2a51b3d04",
+      "timestamp": "2026-08-15T11:24:17.000Z",
+      "monotonic_ms": 227000,
+      "event_type": "submission_evaluated",
+      "page": {
+        "domain": "careers.unknown-portal.example",
+        "path": "/apply",
+        "sanitized_url": "https://careers.unknown-portal.example/apply?job=5521&token=[REDACTED]",
+        "title": "Apply for Backend Engineer",
+        "frame": "top"
+      },
+      "metadata": {
+        "state": "click_without_submission",
+        "confidence_score": 0,
+        "evidence": [{ "kind": "submit_button_clicked", "weight": 0.2, "counted": true }],
+        "negative_evidence": [
+          { "kind": "validation_error_after_submit", "weight": -0.35 },
+          { "kind": "form_still_present", "weight": -0.1 }
+        ],
+        "notes": [
+          "A submit control was activated and the page then produced contradicting evidence.",
+          "Negative evidence recorded: validation_error_after_submit.",
+          "Negative evidence recorded: form_still_present."
+        ]
+      }
+    }
+  ],
+  "submission": {
+    "applied_clicked": true,
+    "submit_detected": false,
+    "confirmation_detected": false,
+    "state": "click_without_submission",
+    "confidence_score": 0,
+    "evidence_kinds": ["submit_button_clicked", "validation_error_after_submit", "form_still_present"],
+    "evidence": [
+      {
+        "kind": "submit_button_clicked",
+        "signal_class": "dom_intent",
+        "timestamp": "2026-08-15T11:24:02.000Z",
+        "weight": 0.2,
+        "detail": "submit-like control clicked: \"Apply now\"",
+        "counted": true
+      }
+    ],
+    "negative_evidence": [
+      {
+        "kind": "validation_error_after_submit",
+        "signal_class": "negative",
+        "timestamp": "2026-08-15T11:24:02.640Z",
+        "weight": -0.35,
+        "detail": "2 validation error(s) appeared after a submit attempt",
+        "counted": true
+      },
+      {
+        "kind": "form_still_present",
+        "signal_class": "negative",
+        "timestamp": "2026-08-15T11:24:17.000Z",
+        "weight": -0.1,
+        "detail": "no submission signal followed the click within 15000ms and the form is still displayed",
+        "counted": true
+      }
+    ],
+    "evaluated_at": "2026-08-15T11:24:17.000Z",
+    "notes": [
+      "A submit control was activated and the page then produced contradicting evidence.",
+      "Negative evidence recorded: validation_error_after_submit.",
+      "Negative evidence recorded: form_still_present."
+    ]
+  },
+  "fill_order": [
+    {
+      "canonical_field": "first_name",
+      "instance_index": 0,
+      "field_id": "f_112233445566",
+      "fill_sequence_number": 1,
+      "timestamp": "2026-08-15T11:21:14.220Z"
+    }
+  ],
+  "environment": {
+    "browser": "Edge",
+    "browser_version": "126.0.2592.68",
+    "engine": "Blink",
+    "platform": "Windows",
+    "extension_version": "1.0.0",
+    "timestamp": "2026-08-15T11:25:00.100Z",
+    "timezone": "Asia/Kolkata",
+    "timezone_offset_minutes": 330,
+    "language": "en-IN",
+    "viewport": { "width": 1920, "height": 1080 }
+  },
+  "partial": false,
+  "generated_at": "2026-08-15T11:25:00.150Z"
+}

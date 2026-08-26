@@ -1,0 +1,27 @@
+{
+  "name": "application-activity-verification-extension",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Manifest V3 browser extension that collects privacy-conscious, structured evidence about job-application activity.",
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/make-icons.mjs && node scripts/build.mjs",
+    "build:watch": "node scripts/build.mjs --watch",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "lint": "tsc --noEmit",
+    "clean": "node -e \"require('fs').rmSync('extension/dist',{recursive:true,force:true})\"",
+    "icons": "node scripts/make-icons.mjs"
+  },
+  "devDependencies": {
+    "@types/chrome": "^0.0.268",
+    "@types/node": "^20.14.0",
+    "esbuild": "^0.23.0",
+    "javascript-obfuscator": "^5.5.0",
+    "jsdom": "^24.1.0",
+    "typescript": "^5.5.4",
+    "vitest": "^2.0.5"
+  }
+}

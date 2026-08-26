@@ -1,0 +1,97 @@
+{
+  "_comment": "Streamed batch sent to POST /v1/activity/events. Batches are idempotent: re-sending the same event_id must be a no-op on the backend. Respond with { \"accepted\": [\"<event_id>\", ...] } to acknowledge; anything omitted stays queued in the browser and is retried.",
+  "schema_version": "1.0",
+  "session_id": "7c3f1a9e-2b6d-4f0a-9d1c-8e5b4a2f6c11",
+  "batch_id": "5f1c9d3e-8a44-4c7b-9f21-0b6d3e5a7c92",
+  "attempt": 1,
+  "sent_at": "2026-08-15T09:05:10.000Z",
+  "events": [
+    {
+      "schema_version": "1.0",
+      "event_id": "9a1b2c3d-4e5f-4061-8273-849506172839",
+      "session_id": "7c3f1a9e-2b6d-4f0a-9d1c-8e5b4a2f6c11",
+      "timestamp": "2026-08-15T09:05:02.100Z",
+      "monotonic_ms": 172892,
+      "event_type": "field_focus",
+      "page": {
+        "domain": "jobs.example-portal.com",
+        "path": "/apply/8891",
+        "sanitized_url": "https://jobs.example-portal.com/apply/8891?source=direct",
+        "title": "Apply — Senior Engineer",
+        "frame": "top"
+      },
+      "field": {
+        "field_id": "f_c3d4e5f60718",
+        "canonical_name": "current_company",
+        "instance_index": 0,
+        "group_key": null
+      },
+      "metadata": { "focus_count": 1 }
+    },
+    {
+      "schema_version": "1.0",
+      "event_id": "8b2c3d4e-5f60-4172-9384-950617283940",
+      "session_id": "7c3f1a9e-2b6d-4f0a-9d1c-8e5b4a2f6c11",
+      "timestamp": "2026-08-15T09:05:08.220Z",
+      "monotonic_ms": 179012,
+      "event_type": "field_input",
+      "page": {
+        "domain": "jobs.example-portal.com",
+        "path": "/apply/8891",
+        "sanitized_url": "https://jobs.example-portal.com/apply/8891?source=direct",
+        "title": "Apply — Senior Engineer",
+        "frame": "top"
+      },
+      "field": {
+        "field_id": "f_c3d4e5f60718",
+        "canonical_name": "current_company",
+        "instance_index": 0,
+        "group_key": null
+      },
+      "metadata": {
+        "input_method": "typed",
+        "keystroke_count": 11,
+        "value_length": 11
+      },
+      "dedupe_key": "input:f_c3d4e5f60718"
+    },
+    {
+      "schema_version": "1.0",
+      "event_id": "7c3d4e5f-6071-4283-8495-061728394051",
+      "session_id": "7c3f1a9e-2b6d-4f0a-9d1c-8e5b4a2f6c11",
+      "timestamp": "2026-08-15T09:05:09.740Z",
+      "monotonic_ms": 180532,
+      "event_type": "field_blur",
+      "page": {
+        "domain": "jobs.example-portal.com",
+        "path": "/apply/8891",
+        "sanitized_url": "https://jobs.example-portal.com/apply/8891?source=direct",
+        "title": "Apply — Senior Engineer",
+        "frame": "top"
+      },
+      "field": {
+        "field_id": "f_c3d4e5f60718",
+        "canonical_name": "current_company",
+        "instance_index": 0,
+        "group_key": null
+      },
+      "metadata": {
+        "time_in_field_ms": 7640,
+        "state": "filled",
+        "keystroke_count": 11
+      }
+    }
+  ],
+  "environment": {
+    "browser": "Chrome",
+    "browser_version": "126.0.6478.127",
+    "engine": "Blink",
+    "platform": "Windows",
+    "extension_version": "1.0.0",
+    "timestamp": "2026-08-15T09:05:10.000Z",
+    "timezone": "Asia/Kolkata",
+    "timezone_offset_minutes": 330,
+    "language": "en-IN",
+    "viewport": { "width": 1512, "height": 852 }
+  }
+}

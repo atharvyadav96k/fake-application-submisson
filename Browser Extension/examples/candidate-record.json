@@ -1,0 +1,20 @@
+{
+  "_comment": "Response from GET /v1/activity/sessions/{session_id}/candidate. The extension holds this in chrome.storage.session (cleared when the browser closes), compares locally, and never sends any of it back. Prefer `hashed_fields` for anything you are not comfortable placing in a page context; the extension can compare against a hash without ever seeing the value. Hashes must be sha256 of `<session hash_salt>|<normalized value>` — request the salt at session start if you intend to precompute them, or simply supply plaintext for low-sensitivity fields only.",
+  "candidate_id": "cand-90312",
+  "fetched_at": "2026-08-15T09:02:12.400Z",
+  "fields": {
+    "first_name": "Jane",
+    "last_name": "Doe",
+    "current_company": "Example Ltd",
+    "current_job_title": "Senior Engineer",
+    "city": "Pune",
+    "country": "India",
+    "experience_years": "8",
+    "linkedin_url": "https://www.linkedin.com/in/jane-doe-eng"
+  },
+  "hashed_fields": {
+    "email": "sha256:4e07408562bedb8b60ce05c1decfe3ad16b72230967de01f640b7e4729b49fce",
+    "phone": "sha256:ef2d127de37b942baad06145e54b0c619a1f22327b2ebbcfbec78f5564afe39d",
+    "date_of_birth": "sha256:e7f6c011776e8db7cd330b54174fd76f7d0216b612387a5ffcfb81e6f0919683"
+  }
+}

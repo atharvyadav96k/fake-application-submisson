@@ -1,0 +1,630 @@
+{
+  "schema_version": "1.0",
+  "session": {
+    "schema_version": "1.0",
+    "session_id": "7c3f1a9e-2b6d-4f0a-9d1c-8e5b4a2f6c11",
+    "operator_id": "op-4821",
+    "candidate_id": "cand-90312",
+    "candidate_email": "[REDACTED]",
+    "candidate_email_hash": "sha256:6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+    "portal_domain": "jobs.example-portal.com",
+    "matched_adapter": "known",
+    "adapter_name": "example-portal",
+    "timestamps": {
+      "selected": "2026-08-15T09:02:11.004Z",
+      "candidate_record_opened": "2026-08-15T09:02:48.221Z",
+      "first_field_fill_at": "2026-08-15T09:04:02.880Z",
+      "first_fill": "2026-08-15T09:04:02.880Z",
+      "applied_clicked": "2026-08-15T09:09:41.110Z",
+      "submit_detected": "2026-08-15T09:09:41.640Z",
+      "confirmed": "2026-08-15T09:09:43.902Z",
+      "last_activity": "2026-08-15T09:09:44.115Z",
+      "ended": "2026-08-15T09:10:02.771Z"
+    },
+    "candidate_record_opened_before_fill": true,
+    "state": "ended",
+    "outcome": "confirmed",
+    "outcome_reasons": [
+      "submission assessed as confirmed with score 0.9976",
+      "confirmation evidence: adapter_confirmation"
+    ],
+    "hash_salt": "",
+    "created_at": "2026-08-15T09:02:11.004Z",
+    "updated_at": "2026-08-15T09:10:02.771Z"
+  },
+  "pages": [
+    {
+      "page_id": "pg_1a2b3c4d5e6f",
+      "sanitized_url": "https://jobs.example-portal.com/jobs/8891",
+      "domain": "jobs.example-portal.com",
+      "path": "/jobs/8891",
+      "title": "Senior Engineer — Example Ltd",
+      "referrer": "https://ats.internal.example/candidates/90312",
+      "entry_point": "initial_load",
+      "frame": "top",
+      "page_type": "job_listing",
+      "first_seen_at": "2026-08-15T09:02:50.010Z",
+      "last_seen_at": "2026-08-15T09:03:31.442Z",
+      "sequence": 0
+    },
+    {
+      "page_id": "pg_2b3c4d5e6f70",
+      "sanitized_url": "https://jobs.example-portal.com/apply/8891?source=direct",
+      "domain": "jobs.example-portal.com",
+      "path": "/apply/8891",
+      "title": "Apply — Senior Engineer",
+      "referrer": "https://jobs.example-portal.com/jobs/8891",
+      "entry_point": "spa_navigation",
+      "frame": "top",
+      "page_type": "application_form",
+      "first_seen_at": "2026-08-15T09:03:31.500Z",
+      "last_seen_at": "2026-08-15T09:09:41.900Z",
+      "sequence": 1
+    },
+    {
+      "page_id": "pg_3c4d5e6f7081",
+      "sanitized_url": "https://jobs.example-portal.com/apply/8891/confirmation",
+      "domain": "jobs.example-portal.com",
+      "path": "/apply/8891/confirmation",
+      "title": "Application submitted",
+      "referrer": "https://jobs.example-portal.com/apply/8891?source=direct",
+      "entry_point": "spa_navigation",
+      "frame": "top",
+      "page_type": "confirmation",
+      "first_seen_at": "2026-08-15T09:09:43.800Z",
+      "last_seen_at": "2026-08-15T09:10:02.700Z",
+      "sequence": 2
+    }
+  ],
+  "fields": [
+    {
+      "field_id": "f_a1b2c3d4e5f6",
+      "canonical_field": "first_name",
+      "instance_index": 0,
+      "group_key": null,
+      "descriptor": {
+        "kind": "input",
+        "tag": "input",
+        "input_type": "text",
+        "name_hint": "applicant_first",
+        "id_hint": "fn",
+        "label_hint": "first name",
+        "placeholder_hint": null,
+        "aria_label_hint": null,
+        "autocomplete": "given-name",
+        "dom_path": "form.application>div.field>input",
+        "signals": ["adapter"],
+        "confidence": 0.98
+      },
+      "sensitivity": "hashed_only",
+      "required": true,
+      "state": "filled",
+      "input_method": "typed",
+      "interaction": {
+        "focus_count": 1,
+        "first_focus_at": "2026-08-15T09:04:00.120Z",
+        "last_focus_at": "2026-08-15T09:04:00.120Z",
+        "last_blur_at": "2026-08-15T09:04:03.640Z",
+        "time_in_field_ms": 3520,
+        "keystroke_count": 4,
+        "paste_count": 0,
+        "edit_count": 0,
+        "clear_count": 0,
+        "fill_sequence_number": 1,
+        "first_fill_at": "2026-08-15T09:04:02.880Z",
+        "last_change_at": "2026-08-15T09:04:02.880Z",
+        "skipped": false
+      },
+      "value": null,
+      "value_hash": "sha256:d4735e3a265e16eee03f59718b9b5d03019c07d8b6c51f90da3a666eec13ab35",
+      "value_redacted": true,
+      "value_length": 4,
+      "match_result": "match",
+      "match_note": null,
+      "first_seen_at": "2026-08-15T09:03:31.680Z",
+      "last_seen_at": "2026-08-15T09:09:41.100Z",
+      "visible": true,
+      "detached_at": null
+    },
+    {
+      "field_id": "f_b2c3d4e5f607",
+      "canonical_field": "email",
+      "instance_index": 0,
+      "group_key": null,
+      "descriptor": {
+        "kind": "input",
+        "tag": "input",
+        "input_type": "email",
+        "name_hint": "applicant_email",
+        "id_hint": "em",
+        "label_hint": "email address",
+        "placeholder_hint": null,
+        "aria_label_hint": null,
+        "autocomplete": "email",
+        "dom_path": "form.application>div.field>input",
+        "signals": ["adapter"],
+        "confidence": 0.98
+      },
+      "sensitivity": "hashed_only",
+      "required": true,
+      "state": "filled",
+      "input_method": "pasted",
+      "interaction": {
+        "focus_count": 2,
+        "first_focus_at": "2026-08-15T09:04:11.010Z",
+        "last_focus_at": "2026-08-15T09:06:02.400Z",
+        "last_blur_at": "2026-08-15T09:06:05.980Z",
+        "time_in_field_ms": 5210,
+        "keystroke_count": 0,
+        "paste_count": 1,
+        "edit_count": 1,
+        "clear_count": 0,
+        "fill_sequence_number": 3,
+        "first_fill_at": "2026-08-15T09:04:12.900Z",
+        "last_change_at": "2026-08-15T09:06:05.400Z",
+        "skipped": false
+      },
+      "value": null,
+      "value_hash": "sha256:4e07408562bedb8b60ce05c1decfe3ad16b72230967de01f640b7e4729b49fce",
+      "value_redacted": true,
+      "value_length": 24,
+      "match_result": "match",
+      "match_note": null,
+      "first_seen_at": "2026-08-15T09:03:31.690Z",
+      "last_seen_at": "2026-08-15T09:09:41.100Z",
+      "visible": true,
+      "detached_at": null
+    },
+    {
+      "field_id": "f_c3d4e5f60718",
+      "canonical_field": "current_company",
+      "instance_index": 0,
+      "group_key": null,
+      "descriptor": {
+        "kind": "input",
+        "tag": "input",
+        "input_type": "text",
+        "name_hint": "employer_current",
+        "id_hint": "co",
+        "label_hint": "current company",
+        "placeholder_hint": "e.g. Example Ltd",
+        "aria_label_hint": null,
+        "autocomplete": "organization",
+        "dom_path": "form.application>div.field>input",
+        "signals": ["adapter"],
+        "confidence": 0.98
+      },
+      "sensitivity": "storable",
+      "required": false,
+      "state": "filled",
+      "input_method": "typed",
+      "interaction": {
+        "focus_count": 1,
+        "first_focus_at": "2026-08-15T09:05:02.100Z",
+        "last_focus_at": "2026-08-15T09:05:02.100Z",
+        "last_blur_at": "2026-08-15T09:05:09.740Z",
+        "time_in_field_ms": 7640,
+        "keystroke_count": 11,
+        "paste_count": 0,
+        "edit_count": 0,
+        "clear_count": 0,
+        "fill_sequence_number": 4,
+        "first_fill_at": "2026-08-15T09:05:08.220Z",
+        "last_change_at": "2026-08-15T09:05:08.220Z",
+        "skipped": false
+      },
+      "value": "Example Ltd",
+      "value_hash": null,
+      "value_redacted": false,
+      "value_length": 11,
+      "match_result": "match",
+      "match_note": null,
+      "first_seen_at": "2026-08-15T09:03:31.700Z",
+      "last_seen_at": "2026-08-15T09:09:41.100Z",
+      "visible": true,
+      "detached_at": null
+    },
+    {
+      "field_id": "f_d4e5f6071829",
+      "canonical_field": "employer_name",
+      "instance_index": 1,
+      "group_key": "employer",
+      "descriptor": {
+        "kind": "input",
+        "tag": "input",
+        "input_type": "text",
+        "name_hint": "employer[1].name",
+        "id_hint": null,
+        "label_hint": "employer name",
+        "placeholder_hint": null,
+        "aria_label_hint": null,
+        "autocomplete": null,
+        "dom_path": "div.repeat:nth(1)>div.field>input",
+        "signals": ["label", "name", "dom_structure"],
+        "confidence": 0.81
+      },
+      "sensitivity": "storable",
+      "required": false,
+      "state": "filled",
+      "input_method": "typed",
+      "interaction": {
+        "focus_count": 1,
+        "first_focus_at": "2026-08-15T09:07:20.000Z",
+        "last_focus_at": "2026-08-15T09:07:20.000Z",
+        "last_blur_at": "2026-08-15T09:07:27.500Z",
+        "time_in_field_ms": 7500,
+        "keystroke_count": 14,
+        "paste_count": 0,
+        "edit_count": 1,
+        "clear_count": 0,
+        "fill_sequence_number": 6,
+        "first_fill_at": "2026-08-15T09:07:25.100Z",
+        "last_change_at": "2026-08-15T09:07:26.900Z",
+        "skipped": false
+      },
+      "value": "Previous Employer Inc",
+      "value_hash": null,
+      "value_redacted": false,
+      "value_length": 21,
+      "match_result": "not_available",
+      "match_note": "candidate record has no employer_name",
+      "first_seen_at": "2026-08-15T09:06:58.400Z",
+      "last_seen_at": "2026-08-15T09:09:41.100Z",
+      "visible": true,
+      "detached_at": null
+    },
+    {
+      "field_id": "f_e5f607182930",
+      "canonical_field": "linkedin_url",
+      "instance_index": 0,
+      "group_key": null,
+      "descriptor": {
+        "kind": "input",
+        "tag": "input",
+        "input_type": "url",
+        "name_hint": "linkedin",
+        "id_hint": "li",
+        "label_hint": "linkedin profile",
+        "placeholder_hint": null,
+        "aria_label_hint": null,
+        "autocomplete": null,
+        "dom_path": "form.application>div.field>input",
+        "signals": ["adapter"],
+        "confidence": 0.98
+      },
+      "sensitivity": "storable",
+      "required": false,
+      "state": "empty",
+      "input_method": "unknown",
+      "interaction": {
+        "focus_count": 0,
+        "first_focus_at": null,
+        "last_focus_at": null,
+        "last_blur_at": null,
+        "time_in_field_ms": 0,
+        "keystroke_count": 0,
+        "paste_count": 0,
+        "edit_count": 0,
+        "clear_count": 0,
+        "fill_sequence_number": null,
+        "first_fill_at": null,
+        "last_change_at": null,
+        "skipped": true
+      },
+      "value": null,
+      "value_hash": null,
+      "value_redacted": false,
+      "value_length": 0,
+      "match_result": "unverifiable",
+      "match_note": "field is empty",
+      "first_seen_at": "2026-08-15T09:03:31.720Z",
+      "last_seen_at": "2026-08-15T09:09:41.100Z",
+      "visible": true,
+      "detached_at": null
+    },
+    {
+      "field_id": "f_f60718293041",
+      "canonical_field": "password",
+      "instance_index": 0,
+      "group_key": null,
+      "descriptor": {
+        "kind": "input",
+        "tag": "input",
+        "input_type": "password",
+        "name_hint": "account_password",
+        "id_hint": "pw",
+        "label_hint": "create a password",
+        "placeholder_hint": null,
+        "aria_label_hint": null,
+        "autocomplete": "new-password",
+        "dom_path": "form.application>div.field>input",
+        "signals": ["label", "autocomplete"],
+        "confidence": 0.94
+      },
+      "sensitivity": "never_store",
+      "required": true,
+      "state": "filled",
+      "input_method": "unknown",
+      "interaction": {
+        "focus_count": 1,
+        "first_focus_at": "2026-08-15T09:08:40.000Z",
+        "last_focus_at": "2026-08-15T09:08:40.000Z",
+        "last_blur_at": "2026-08-15T09:08:49.200Z",
+        "time_in_field_ms": 9200,
+        "keystroke_count": 16,
+        "paste_count": 0,
+        "edit_count": 0,
+        "clear_count": 0,
+        "fill_sequence_number": 7,
+        "first_fill_at": "2026-08-15T09:08:48.000Z",
+        "last_change_at": "2026-08-15T09:08:48.000Z",
+        "skipped": false
+      },
+      "value": null,
+      "value_hash": null,
+      "value_redacted": true,
+      "value_length": 16,
+      "match_result": "unverifiable",
+      "match_note": "value is not readable under the privacy policy",
+      "first_seen_at": "2026-08-15T09:03:31.730Z",
+      "last_seen_at": "2026-08-15T09:09:41.100Z",
+      "visible": true,
+      "detached_at": null
+    }
+  ],
+  "events": [
+    {
+      "schema_version": "1.0",
+      "event_id": "0f2a1c44-6c9e-4c1a-9a2b-1d3e4f5a6b70",
+      "session_id": "7c3f1a9e-2b6d-4f0a-9d1c-8e5b4a2f6c11",
+      "timestamp": "2026-08-15T09:02:50.020Z",
+      "monotonic_ms": 812,
+      "event_type": "page_view",
+      "page": {
+        "domain": "jobs.example-portal.com",
+        "path": "/jobs/8891",
+        "sanitized_url": "https://jobs.example-portal.com/jobs/8891",
+        "title": "Senior Engineer — Example Ltd",
+        "frame": "top"
+      },
+      "metadata": {
+        "page_id": "pg_1a2b3c4d5e6f",
+        "page_type": "job_listing",
+        "entry_point": "initial_load",
+        "adapter": "example-portal",
+        "adapter_kind": "known"
+      },
+      "dedupe_key": "page_view:pg_1a2b3c4d5e6f"
+    },
+    {
+      "schema_version": "1.0",
+      "event_id": "1a3b2d55-7d0f-4d2b-8b3c-2e4f5a6b7c81",
+      "session_id": "7c3f1a9e-2b6d-4f0a-9d1c-8e5b4a2f6c11",
+      "timestamp": "2026-08-15T09:04:02.880Z",
+      "monotonic_ms": 73672,
+      "event_type": "field_fill",
+      "page": {
+        "domain": "jobs.example-portal.com",
+        "path": "/apply/8891",
+        "sanitized_url": "https://jobs.example-portal.com/apply/8891?source=direct",
+        "title": "Apply — Senior Engineer",
+        "frame": "top"
+      },
+      "field": {
+        "field_id": "f_a1b2c3d4e5f6",
+        "canonical_name": "first_name",
+        "instance_index": 0,
+        "group_key": null
+      },
+      "metadata": {
+        "input_method": "typed",
+        "fill_sequence_number": 1,
+        "state": "filled",
+        "match_result": "match",
+        "match_note": null,
+        "keystroke_count": 4,
+        "paste_count": 0,
+        "value_length": 4
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "event_id": "2b4c3e66-8e10-4e3c-9c4d-3f5a6b7c8d92",
+      "session_id": "7c3f1a9e-2b6d-4f0a-9d1c-8e5b4a2f6c11",
+      "timestamp": "2026-08-15T09:09:41.110Z",
+      "monotonic_ms": 411902,
+      "event_type": "submit_button_click",
+      "page": {
+        "domain": "jobs.example-portal.com",
+        "path": "/apply/8891",
+        "sanitized_url": "https://jobs.example-portal.com/apply/8891?source=direct",
+        "title": "Apply — Senior Engineer",
+        "frame": "top"
+      },
+      "metadata": {
+        "detail": "portal submit control clicked: \"Submit application\"",
+        "adapter": "example-portal"
+      },
+      "dedupe_key": "submit_click"
+    },
+    {
+      "schema_version": "1.0",
+      "event_id": "3c5d4f77-9f21-4f4d-8d5e-4a6b7c8d9ea3",
+      "session_id": "7c3f1a9e-2b6d-4f0a-9d1c-8e5b4a2f6c11",
+      "timestamp": "2026-08-15T09:09:41.640Z",
+      "monotonic_ms": 412432,
+      "event_type": "network_request",
+      "page": {
+        "domain": "jobs.example-portal.com",
+        "path": "/apply/8891",
+        "sanitized_url": "https://jobs.example-portal.com/apply/8891?source=direct",
+        "title": "Apply — Senior Engineer",
+        "frame": "top"
+      },
+      "metadata": {
+        "method": "POST",
+        "url": "https://jobs.example-portal.com/api/v1/applications",
+        "origin_kind": "same_origin",
+        "status": 201,
+        "ok": true,
+        "duration_ms": 486,
+        "transport": "fetch",
+        "looks_like_submission": true,
+        "reasons": ["method_post", "adapter_match", "correlated_with_submit_intent"],
+        "request_body_bytes": 3184
+      },
+      "dedupe_key": "net:POST:https://jobs.example-portal.com/api/v1/applications:201"
+    },
+    {
+      "schema_version": "1.0",
+      "event_id": "4d6e5088-a032-405e-9e6f-5b7c8d9eafb4",
+      "session_id": "7c3f1a9e-2b6d-4f0a-9d1c-8e5b4a2f6c11",
+      "timestamp": "2026-08-15T09:09:43.902Z",
+      "monotonic_ms": 414694,
+      "event_type": "dom_confirmation",
+      "page": {
+        "domain": "jobs.example-portal.com",
+        "path": "/apply/8891/confirmation",
+        "sanitized_url": "https://jobs.example-portal.com/apply/8891/confirmation",
+        "title": "Application submitted",
+        "frame": "top"
+      },
+      "metadata": {
+        "matcher": "adapter_confirmation",
+        "excerpt": "Application submitted. Reference AP-8891-4471.",
+        "source": "adapter",
+        "selector": "[data-application-state]",
+        "detail": "portal reported data-application-state=\"submitted\""
+      },
+      "dedupe_key": "confirm:adapter_confirmation:[data-application-state]"
+    },
+    {
+      "schema_version": "1.0",
+      "event_id": "5e7f6199-b143-4160-af70-6c8d9eafb0c5",
+      "session_id": "7c3f1a9e-2b6d-4f0a-9d1c-8e5b4a2f6c11",
+      "timestamp": "2026-08-15T09:09:43.910Z",
+      "monotonic_ms": 414702,
+      "event_type": "submission_evaluated",
+      "page": {
+        "domain": "jobs.example-portal.com",
+        "path": "/apply/8891/confirmation",
+        "sanitized_url": "https://jobs.example-portal.com/apply/8891/confirmation",
+        "title": "Application submitted",
+        "frame": "top"
+      },
+      "metadata": {
+        "state": "confirmed",
+        "confidence_score": 0.9976,
+        "evidence": [
+          { "kind": "submit_button_clicked", "weight": 0.2, "counted": true },
+          { "kind": "submission_request_success", "weight": 0.8, "counted": true },
+          { "kind": "confirmation_navigation", "weight": 0.8, "counted": true },
+          { "kind": "adapter_confirmation", "weight": 1, "counted": true }
+        ],
+        "negative_evidence": [],
+        "notes": []
+      }
+    }
+  ],
+  "submission": {
+    "applied_clicked": true,
+    "submit_detected": true,
+    "confirmation_detected": true,
+    "state": "confirmed",
+    "confidence_score": 0.9976,
+    "evidence_kinds": [
+      "submit_button_clicked",
+      "submission_request_success",
+      "confirmation_navigation",
+      "adapter_confirmation"
+    ],
+    "evidence": [
+      {
+        "kind": "submit_button_clicked",
+        "signal_class": "dom_intent",
+        "timestamp": "2026-08-15T09:09:41.110Z",
+        "weight": 0.2,
+        "detail": "portal submit control clicked: \"Submit application\"",
+        "counted": true
+      },
+      {
+        "kind": "submission_request_success",
+        "signal_class": "network",
+        "timestamp": "2026-08-15T09:09:41.640Z",
+        "weight": 0.8,
+        "detail": "POST https://jobs.example-portal.com/api/v1/applications responded 201",
+        "counted": true
+      },
+      {
+        "kind": "confirmation_navigation",
+        "signal_class": "navigation",
+        "timestamp": "2026-08-15T09:09:43.820Z",
+        "weight": 0.8,
+        "detail": "navigated to a confirmation page (/apply/8891/confirmation)",
+        "counted": true
+      },
+      {
+        "kind": "adapter_confirmation",
+        "signal_class": "confirmation",
+        "timestamp": "2026-08-15T09:09:43.902Z",
+        "weight": 1,
+        "detail": "portal reported data-application-state=\"submitted\"",
+        "counted": true
+      }
+    ],
+    "negative_evidence": [],
+    "evaluated_at": "2026-08-15T09:09:43.910Z",
+    "notes": []
+  },
+  "fill_order": [
+    {
+      "canonical_field": "first_name",
+      "instance_index": 0,
+      "field_id": "f_a1b2c3d4e5f6",
+      "fill_sequence_number": 1,
+      "timestamp": "2026-08-15T09:04:02.880Z"
+    },
+    {
+      "canonical_field": "email",
+      "instance_index": 0,
+      "field_id": "f_b2c3d4e5f607",
+      "fill_sequence_number": 3,
+      "timestamp": "2026-08-15T09:04:12.900Z"
+    },
+    {
+      "canonical_field": "current_company",
+      "instance_index": 0,
+      "field_id": "f_c3d4e5f60718",
+      "fill_sequence_number": 4,
+      "timestamp": "2026-08-15T09:05:08.220Z"
+    },
+    {
+      "canonical_field": "employer_name",
+      "instance_index": 1,
+      "field_id": "f_d4e5f6071829",
+      "fill_sequence_number": 6,
+      "timestamp": "2026-08-15T09:07:25.100Z"
+    },
+    {
+      "canonical_field": "password",
+      "instance_index": 0,
+      "field_id": "f_f60718293041",
+      "fill_sequence_number": 7,
+      "timestamp": "2026-08-15T09:08:48.000Z"
+    }
+  ],
+  "environment": {
+    "browser": "Chrome",
+    "browser_version": "126.0.6478.127",
+    "engine": "Blink",
+    "platform": "Windows",
+    "extension_version": "1.0.0",
+    "timestamp": "2026-08-15T09:10:02.780Z",
+    "timezone": "Asia/Kolkata",
+    "timezone_offset_minutes": 330,
+    "language": "en-IN",
+    "viewport": { "width": 1512, "height": 852 }
+  },
+  "partial": false,
+  "generated_at": "2026-08-15T09:10:02.790Z"
+}

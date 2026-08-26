@@ -1,0 +1,48 @@
+{
+  "manifest_version": 3,
+  "name": "Application Activity Verification",
+  "version": "1.0.0",
+  "description": "Collects structured, privacy-conscious evidence about how a job application was filled and whether it was actually submitted.",
+  "minimum_chrome_version": "114",
+  "permissions": ["storage", "alarms"],
+  "host_permissions": ["http://*/*", "https://*/*"],
+  "background": {
+    "service_worker": "dist/service-worker.js",
+    "type": "module"
+  },
+  "action": {
+    "default_popup": "dist/popup.html",
+    "default_title": "Application Activity Verification",
+    "default_icon": {
+      "16": "dist/icons/icon-16.png",
+      "48": "dist/icons/icon-48.png",
+      "128": "dist/icons/icon-128.png"
+    }
+  },
+  "icons": {
+    "16": "dist/icons/icon-16.png",
+    "48": "dist/icons/icon-48.png",
+    "128": "dist/icons/icon-128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["dist/content.js"],
+      "run_at": "document_idle",
+      "all_frames": true,
+      "match_about_blank": false,
+      "world": "ISOLATED"
+    },
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["dist/page-hook.js"],
+      "run_at": "document_start",
+      "all_frames": true,
+      "world": "MAIN"
+    }
+  ],
+  "web_accessible_resources": [],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'"
+  }
+}

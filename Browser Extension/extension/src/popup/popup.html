@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Application Activity Verification</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Application Activity</h1>
+      <span id="status-pill" class="pill pill--idle">idle</span>
+    </header>
+
+    <section id="login-panel" class="panel" hidden>
+      <h2>Log in</h2>
+      <label for="login-email">Email</label>
+      <input id="login-email" type="email" autocomplete="username" />
+      <label for="login-password">Password</label>
+      <input id="login-password" type="password" autocomplete="current-password" />
+      <button id="login-submit" class="primary">Log in</button>
+      <p id="login-error" class="hint"></p>
+    </section>
+
+    <section id="start-panel" class="panel" hidden>
+      <p class="hint" id="auth-whoami"></p>
+
+      <h2>Start tracking</h2>
+      <label for="client-select">Client (by email)</label>
+      <select id="client-select"></select>
+      <button id="start" class="primary">Start tracking</button>
+      <p id="start-error" class="hint"></p>
+    </section>
+
+    <section id="session-panel" class="panel" hidden>
+      <p id="submitted-verdict" class="verdict verdict--unknown">Not submitted yet</p>
+
+      <dl class="grid">
+        <dt>Portal</dt><dd id="session-portal"></dd>
+        <dt>Adapter</dt><dd id="session-adapter"></dd>
+      </dl>
+
+      <h2>Submission evidence</h2>
+      <div class="score">
+        <div class="score__bar"><div id="score-fill" class="score__fill"></div></div>
+        <span id="score-value" class="mono">0.00</span>
+      </div>
+      <p id="submission-state" class="state"></p>
+      <ul id="evidence" class="evidence"></ul>
+      <ul id="notes" class="notes"></ul>
+
+      <div class="actions">
+        <button id="flush">Flush queue</button>
+        <button id="copy-payload">Copy payload</button>
+      </div>
+      <p id="copy-status" class="hint"></p>
+      <div class="actions actions--row">
+        <button id="end" class="primary">Mark as completed</button>
+        <button id="discard" class="danger">Not doing this job now</button>
+      </div>
+      <p id="discard-hint" class="hint">
+        "Not doing this job now" discards everything collected so far — nothing is sent
+        or saved.
+      </p>
+    </section>
+
+    <footer>
+      <p class="hint">
+        Collects field metadata, interaction counts, and submission signals. Never
+        collects passwords, keystrokes, tokens, cookies, or request bodies.
+      </p>
+      <button id="logout" class="hint" hidden>Log out</button>
+    </footer>
+
+    <script src="popup.js"></script>
+  </body>
+</html>
